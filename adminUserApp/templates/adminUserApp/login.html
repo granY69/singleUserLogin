@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block head %}{% endblock head %}
+{% block title %}{{ label.ltitle }}{% endblock title %}
+{% comment %} {% block navbar %}{% endblock navbar %} {% endcomment %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <h3>{{ label.lfhead1 }}</h3>
+        <div class="col-md-6">
+
+            <form class="well form-horizontal" action="" method="post">
+                {% csrf_token %}
+                {% comment %} {{ form.errors }} {% endcomment %}
+                {{ form.non_field_errors }}
+                <div class="form-group">
+                    <label for="username">{{ label.username }}</label>{{form.username}}{{ form.username.errors }}
+                </div>
+
+                <div class="form-group">
+                    <label for="password">{{ label.password }}</label>{{form.password}}{{ form.password.errors }}
+                </div>
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <div class=""><br>
+                        <button class="btn btn-primary">{{ label.login }}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

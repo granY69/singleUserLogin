@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}{% endblock head %}
+{% block title %}{{ label.title }}{% endblock title %}
+{% comment %} {% block navbar %}{% endblock navbar %} {% endcomment %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <h1>
+            Welcome, {{ user.username }}!
+        </h1>
+    </div>
+</div>
+{% endblock content %}
