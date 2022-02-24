@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock head %}
+{% block title %}
+{{ label.title }}
+{% endblock title %}
+{% comment %} {% block navbar %}{% endblock navbar %} {% endcomment %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>Workers Listing</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div id="workers-table_wrapper" class="dataTables_wrapper no-footer">
+
+                                <!-- table -->
+                                <div class="table-responsive">
+                                    <table class="table align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="w-25">Heading 1</th>
+                                                <th scope="col" class="w-25">Heading 2</th>
+                                                <th scope="col" class="w-25">Heading 3</th>
+                                                <th scope="col" class="w-25">Heading 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>r1c1</td>
+                                                <td>r1c2</td>
+                                                <td>r1c3</td>
+                                                <td>r1c4</td>
+                                            </tr>                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

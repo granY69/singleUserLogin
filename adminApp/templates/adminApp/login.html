@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock head %}
+{% block title %}
+{{ label.ltitle }}
+{% endblock title %}
+{% comment %} {% block navbar %}{% endblock navbar %} {% endcomment %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-4">
+            <h3>{{ label.lfhead1 }}</h3>
+            {% load crispy_forms_tags %}
+            <form class="well form-horizontal" action="" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <!-- <label for="username" class="form-label">{{label.username}}</label> -->
+                    {{ form.username|as_crispy_field }}{{ form.username.errors }}
+                    <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+                </div>
+                <div class="mb-3">
+                    <!-- <label for="password" class="form-label">{{label.password}}</label> -->
+                    {{ form.password|as_crispy_field }}{{ form.username.errors }}
+                    <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
+                </div>
+                <button type="submit" class="btn btn-primary">{{label.login}}</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
