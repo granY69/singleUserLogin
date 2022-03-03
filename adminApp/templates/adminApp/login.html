@@ -11,7 +11,9 @@
         <div class="col-md-4">
             <h3>{{ label.lfhead1 }}</h3>
             {% load crispy_forms_tags %}
-            <form class="well form-horizontal" action="" method="post">
+            <form class="well form-horizontal" action="" method="post">                
+                {% comment %} {{ form.errors }} {% endcomment %}
+                {{ form.non_field_errors }}
                 {% csrf_token %}
                 <div class="mb-3">
                     <!-- <label for="username" class="form-label">{{label.username}}</label> -->
